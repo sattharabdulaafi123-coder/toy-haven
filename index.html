@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Toy Haven | Toys, Board Games, Figurines & Diecast Cars</title>
+  <meta name="description" content="Toy Haven is an online toy store for collectible figurines, toys, board games and diecast model cars.">
+  <meta name="author" content="Toy Haven">
+  <meta name="theme-color" content="#1f2544">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-32.png">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&amp;family=Nunito:wght@400;600;700&amp;display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    /* Mark JS as available and hide any image that fails to load (shows the placeholder box instead) */
+    document.documentElement.className = "js";
+    document.addEventListener("error", function (e) {
+      if (e.target.tagName === "IMG") e.target.classList.add("img-missing");
+    }, true);
+  </script>
+  <script src="js/data.js" defer></script>
+  <script src="js/common.js" defer></script>
+  <script src="js/home.js" defer></script>
+</head><body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Toy Haven home">
+        <span class="logo-mark" aria-hidden="true">TH</span>
+        <span>Toy Haven</span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="products.html">Shop</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="wishlist.html">Wishlist</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="products.html#search" class="icon-btn" aria-label="Search products"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></a>
+        <a href="wishlist.html" class="icon-btn" aria-label="My wishlist and collection"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></a>
+        <a href="cart.html" class="icon-btn cart-link" aria-label="Shopping cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6.2"/><circle cx="10" cy="20.5" r="1.3"/><circle cx="17" cy="20.5" r="1.3"/></svg><span class="cart-count" data-cart-count>0</span></a>
+        <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="container hero" aria-label="Promotional banners">
+      <div class="slider" id="hero-slider">
+        <div class="slides">
+          <div class="slide" role="group" aria-roledescription="slide" aria-label="1 of 4">
+            <span class="media"><img src="images/image1.webp" alt="Collectible figurines displayed on shelves" width="1600" height="700" fetchpriority="high"></span>
+            <div class="slide-caption">
+              <p class="slide-title">Figurines worth collecting</p>
+              <p>Hand-painted heroes, dragons and limited editions.</p>
+              <a class="btn btn-primary btn-sm" href="products.html?category=Figurines">Shop Now</a>
+            </div>
+          </div>
+          <div class="slide" role="group" aria-roledescription="slide" aria-label="2 of 4">
+            <span class="media"><img src="images/image2.webp" alt="Colourful toys for young children" width="1600" height="700" loading="lazy"></span>
+            <div class="slide-caption">
+              <p class="slide-title">Toys that spark imagination</p>
+              <p>Blocks, plush friends and build-it-yourself kits.</p>
+              <a class="btn btn-primary btn-sm" href="products.html?category=Toys">Shop Now</a>
+            </div>
+          </div>
+          <div class="slide" role="group" aria-roledescription="slide" aria-label="3 of 4">
+            <span class="media"><img src="images/image3.webp" alt="A family playing a board game together" width="1600" height="700" loading="lazy"></span>
+            <div class="slide-caption">
+              <p class="slide-title">Game night, sorted</p>
+              <p>Strategy, trivia and co-op adventures for every table.</p>
+              <a class="btn btn-primary btn-sm" href="products.html?category=Board%20Games">Shop Now</a>
+            </div>
+          </div>
+          <div class="slide" role="group" aria-roledescription="slide" aria-label="4 of 4">
+            <span class="media"><img src="images/image4.webp" alt="Detailed diecast model cars" width="1600" height="700" loading="lazy"></span>
+            <div class="slide-caption">
+              <p class="slide-title">Diecast cars in every scale</p>
+              <p>Classic, rally and racing replicas from 1:43 to 1:18.</p>
+              <a class="btn btn-primary btn-sm" href="products.html?category=Diecast%20Cars">Shop Now</a>
+            </div>
+          </div>
+        </div>
+        <button class="slider-arrow slider-prev" type="button" aria-label="Previous banner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button>
+        <button class="slider-arrow slider-next" type="button" aria-label="Next banner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
+        <div class="slider-dots"></div>
+      </div>
+    </section>
+
+    <section class="container intro" aria-labelledby="intro-title">
+      <div class="intro-text reveal">
+        <h1 id="intro-title">Your happy place for toys, games &amp; collectibles</h1>
+        <p>From first building blocks to limited-edition statues, Toy Haven brings every kind of play together in one place. Browse, save favourites to your collection and check out in minutes.</p>
+        <a class="btn btn-primary" href="products.html">Shop Now</a>
+      </div>
+      <aside class="potd reveal" id="potd" aria-labelledby="potd-title">
+        <span class="media"></span>
+        <div>
+          <span class="potd-label">Product of the Day</span>
+          <h2 id="potd-title">Today's pick</h2>
+        </div>
+      </aside>
+    </section>
+
+    <section class="container section" aria-labelledby="featured-title">
+      <div class="section-head">
+        <h2 id="featured-title">Featured Products</h2>
+      </div>
+      <div class="grid-4" id="featured-grid"></div>
+      <noscript><p class="empty-state">Please enable JavaScript to use this page.</p></noscript>
+    </section>
+
+    <section class="container section" aria-labelledby="new-title">
+      <div class="section-head">
+        <h2 id="new-title">New Arrivals</h2>
+      </div>
+      <div class="grid-3" id="new-grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" aria-label="Toy Haven home">
+          <span class="logo-mark" aria-hidden="true">TH</span>
+          <span>Toy Haven</span>
+        </a>
+        <p>Figurines, toys, board games and diecast cars for collectors, families and gift shoppers.</p>
+      </div>
+
+      <nav class="footer-col" aria-label="Shop links">
+        <h2 class="footer-title">Shop</h2>
+        <ul>
+          <li><a href="products.html?category=Figurines">Figurines</a></li>
+          <li><a href="products.html?category=Toys">Toys</a></li>
+          <li><a href="products.html?category=Board%20Games">Board Games</a></li>
+          <li><a href="products.html?category=Diecast%20Cars">Diecast Cars</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-label="Help links">
+        <h2 class="footer-title">Help</h2>
+        <ul>
+          <li><a href="cart.html">My Cart</a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+          <li><a href="wishlist.html">Wishlist</a></li>
+          <li><a href="support.html">Support &amp; FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-news">
+        <h2 class="footer-title">Join our newsletter</h2>
+        <form class="newsletter-form" id="newsletter-form" novalidate>
+          <label for="newsletter-email" class="sr-only">Email address</label>
+          <div class="newsletter-row">
+            <input type="email" id="newsletter-email" name="email" placeholder="you@example.com" autocomplete="email">
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </div>
+          <p class="form-msg" id="newsletter-msg" role="status" aria-live="polite"></p>
+        </form>
+        <ul class="socials">
+          <li><a href="https://www.facebook.com/" aria-label="Toy Haven on Facebook" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h-2.5A4.5 4.5 0 0 0 8 7.5V10H5.5v4H8v7h4v-7h3l.5-4H12V7.8c0-.5.4-.8.8-.8H15z"/></svg></a></li>
+          <li><a href="https://www.instagram.com/" aria-label="Toy Haven on Instagram" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8"/></svg></a></li>
+          <li><a href="https://www.youtube.com/" aria-label="Toy Haven on YouTube" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3z"/></svg></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; <span data-year>2026</span> Toy Haven. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

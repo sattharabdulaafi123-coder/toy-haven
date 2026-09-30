@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Feedback & Support | Toy Haven</title>
+  <meta name="description" content="Send feedback to Toy Haven and find answers to common questions about delivery, returns and safety.">
+  <meta name="author" content="Toy Haven">
+  <meta name="theme-color" content="#1f2544">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-32.png">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&amp;family=Nunito:wght@400;600;700&amp;display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    /* Mark JS as available and hide any image that fails to load (shows the placeholder box instead) */
+    document.documentElement.className = "js";
+    document.addEventListener("error", function (e) {
+      if (e.target.tagName === "IMG") e.target.classList.add("img-missing");
+    }, true);
+  </script>
+  <script src="js/data.js" defer></script>
+  <script src="js/common.js" defer></script>
+  <script src="js/support.js" defer></script>
+</head><body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Toy Haven home">
+        <span class="logo-mark" aria-hidden="true">TH</span>
+        <span>Toy Haven</span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Shop</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="wishlist.html">Wishlist</a></li>
+          <li><a href="support.html" aria-current="page">Support</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="products.html#search" class="icon-btn" aria-label="Search products"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></a>
+        <a href="wishlist.html" class="icon-btn" aria-label="My wishlist and collection"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></a>
+        <a href="cart.html" class="icon-btn cart-link" aria-label="Shopping cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6.2"/><circle cx="10" cy="20.5" r="1.3"/><circle cx="17" cy="20.5" r="1.3"/></svg><span class="cart-count" data-cart-count>0</span></a>
+        <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <h1 class="page-title">Feedback &amp; Support</h1>
+    <p class="page-lead">Tell us what you think or find a quick answer below.</p>
+
+    <div class="support-layout">
+      <section class="card-box" aria-labelledby="feedback-title">
+        <h2 id="feedback-title">Send Us Feedback</h2>
+        <form id="feedback-form" novalidate>
+            <div class="field">
+              <label for="fb-name">Name</label>
+              <input type="text" id="fb-name" name="fb-name" aria-describedby="fb-name-error" autocomplete="name" required>
+              <span class="field-error" id="fb-name-error"></span>
+            </div>
+            <div class="field">
+              <label for="fb-email">Email</label>
+              <input type="email" id="fb-email" name="fb-email" aria-describedby="fb-email-error" autocomplete="email" required>
+              <span class="field-error" id="fb-email-error"></span>
+            </div>
+          <div class="field">
+            <label for="fb-message">Message <span class="char-count" id="char-count">0 / 500</span></label>
+            <textarea id="fb-message" name="message" maxlength="500" aria-describedby="fb-message-error" required></textarea>
+            <span class="field-error" id="fb-message-error"></span>
+          </div>
+          <button type="submit" class="btn btn-dark btn-block">Send Message</button>
+        </form>
+
+        <div class="confirm-panel" id="feedback-confirm" tabindex="-1" role="status" hidden>
+          <svg class="check-circle" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="29"/><path d="M19 33l9 9 17-19"/></svg>
+          <h3>Thank you, <span id="confirm-name">friend</span>!</h3>
+          <p>Your message has been received. Our team replies within 24 hours.</p>
+          <button type="button" class="btn btn-outline" id="send-another">Send Another Message</button>
+        </div>
+      </section>
+
+      <section class="card-box" aria-labelledby="faq-title">
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+        <div class="accordion">
+          <div class="acc-item">
+            <h3><button class="acc-trigger" type="button" id="faq-1-btn" aria-expanded="false" aria-controls="faq-1">How long does delivery take?<span class="acc-icon" aria-hidden="true"></span></button></h3>
+            <div class="acc-panel" id="faq-1" role="region" aria-labelledby="faq-1-btn">
+              <div><p>Orders within Colombo arrive in 1-2 working days. Other cities usually take 3-5 working days. Delivery is free on orders over Rs. 10,000.</p></div>
+            </div>
+          </div>
+          <div class="acc-item">
+            <h3><button class="acc-trigger" type="button" id="faq-2-btn" aria-expanded="false" aria-controls="faq-2">Can I return a toy?<span class="acc-icon" aria-hidden="true"></span></button></h3>
+            <div class="acc-panel" id="faq-2" role="region" aria-labelledby="faq-2-btn">
+              <div><p>Yes. Unopened items can be returned within 14 days. Collectibles must stay in their original sealed packaging to be returned.</p></div>
+            </div>
+          </div>
+          <div class="acc-item">
+            <h3><button class="acc-trigger" type="button" id="faq-3-btn" aria-expanded="false" aria-controls="faq-3">Are your products safe for young children?<span class="acc-icon" aria-hidden="true"></span></button></h3>
+            <div class="acc-panel" id="faq-3" role="region" aria-labelledby="faq-3-btn">
+              <div><p>Every product lists a recommended age. Toys for under-3s contain no small parts and use child-safe, non-toxic paints.</p></div>
+            </div>
+          </div>
+          <div class="acc-item">
+            <h3><button class="acc-trigger" type="button" id="faq-4-btn" aria-expanded="false" aria-controls="faq-4">Do you offer gift wrapping?<span class="acc-icon" aria-hidden="true"></span></button></h3>
+            <div class="acc-panel" id="faq-4" role="region" aria-labelledby="faq-4-btn">
+              <div><p>Yes. Add a note in the feedback form after ordering and we will gift wrap your parcel and include a handwritten card.</p></div>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-outline btn-sm" id="faq-toggle-all" type="button">Expand All</button>
+
+        <div class="support-visit">
+          <span class="media media-wide"><img src="images/image1.webp" alt="Collectible figurines on display in the Toy Haven store" width="800" height="450" loading="lazy"></span>
+          <h3>Visit or call us</h3>
+          <address>
+            Toy Haven, 45 Galle Road, Colombo 03<br>
+            Open daily 10am - 8pm<br>
+            Phone: <a href="tel:+94112345678">011 234 5678</a><br>
+            Email: <a href="mailto:hello@toyhaven.example">hello@toyhaven.example</a>
+          </address>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" aria-label="Toy Haven home">
+          <span class="logo-mark" aria-hidden="true">TH</span>
+          <span>Toy Haven</span>
+        </a>
+        <p>Figurines, toys, board games and diecast cars for collectors, families and gift shoppers.</p>
+      </div>
+
+      <nav class="footer-col" aria-label="Shop links">
+        <h2 class="footer-title">Shop</h2>
+        <ul>
+          <li><a href="products.html?category=Figurines">Figurines</a></li>
+          <li><a href="products.html?category=Toys">Toys</a></li>
+          <li><a href="products.html?category=Board%20Games">Board Games</a></li>
+          <li><a href="products.html?category=Diecast%20Cars">Diecast Cars</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-label="Help links">
+        <h2 class="footer-title">Help</h2>
+        <ul>
+          <li><a href="cart.html">My Cart</a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+          <li><a href="wishlist.html">Wishlist</a></li>
+          <li><a href="support.html">Support &amp; FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-news">
+        <h2 class="footer-title">Join our newsletter</h2>
+        <form class="newsletter-form" id="newsletter-form" novalidate>
+          <label for="newsletter-email" class="sr-only">Email address</label>
+          <div class="newsletter-row">
+            <input type="email" id="newsletter-email" name="email" placeholder="you@example.com" autocomplete="email">
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </div>
+          <p class="form-msg" id="newsletter-msg" role="status" aria-live="polite"></p>
+        </form>
+        <ul class="socials">
+          <li><a href="https://www.facebook.com/" aria-label="Toy Haven on Facebook" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h-2.5A4.5 4.5 0 0 0 8 7.5V10H5.5v4H8v7h4v-7h3l.5-4H12V7.8c0-.5.4-.8.8-.8H15z"/></svg></a></li>
+          <li><a href="https://www.instagram.com/" aria-label="Toy Haven on Instagram" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8"/></svg></a></li>
+          <li><a href="https://www.youtube.com/" aria-label="Toy Haven on YouTube" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3z"/></svg></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; <span data-year>2026</span> Toy Haven. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

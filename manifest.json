@@ -1,0 +1,58 @@
+{
+  "name": "Toy Haven - Toys, Games & Collectibles",
+  "short_name": "Toy Haven",
+  "description": "Shop collectible figurines, toys, board games and diecast model cars.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#fffaf3",
+  "theme_color": "#1f2544",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "id": "./index.html",
+  "lang": "en",
+  "categories": [
+    "shopping"
+  ],
+  "shortcuts": [
+    {
+      "name": "Shop",
+      "url": "products.html",
+      "icons": [
+        {
+          "src": "icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Cart",
+      "url": "cart.html",
+      "icons": [
+        {
+          "src": "icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}
